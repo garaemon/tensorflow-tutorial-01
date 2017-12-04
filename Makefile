@@ -13,7 +13,7 @@ no_targets__:
 
 # install all dependencies (do not forget to create a virtualenv first)
 setup:
-	@pip install -U -e .\[tests\]
+	(source .venv/bin/activate; pip install -U -e .\[tests\])
 
 # test your application (tests in the tests/ directory)
 test: unit
@@ -32,3 +32,6 @@ tox:
 
 #docs:
 	#@cd tensorflow_tutorials/docs && make html && open _build/html/index.html
+
+virtualenv:
+	virtualenv .venv
