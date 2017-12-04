@@ -36,7 +36,8 @@ y = tf.nn.softmax(tf.matmul(x, W) + b)
 y_ = tf.placeholder(tf.float32, [None, 10])
 # use reduce_sum to sum the second dimension elements.
 # use reduce_mean to computes the mean over all the examples of the batch.
-cross_entropy = tf.reduce_mean(-tf.reduce_sum(y_ * tf.log(y), reduction_indices=[1]))
+cross_entropy = tf.reduce_mean(
+    -tf.reduce_sum(y_ * tf.log(y), reduction_indices=[1]))
 
 train_step = tf.train.GradientDescentOptimizer(0.5).minimize(cross_entropy)
 
@@ -52,4 +53,9 @@ print('Run 1000 epochs with batch size = 100')
 for _ in range(1000):
     batch_xs, batch_ys = mnist.train.next_batch(100)
     sess.run(train_step, feed_dict={x: batch_xs, y_: batch_ys})
-print('accuracy: ', sess.run(accuracy, feed_dict={x: mnist.test.images, y_: mnist.test.labels}))
+print('accuracy: ',
+      sess.run(
+          accuracy, feed_dict={
+              x: mnist.test.images,
+              y_: mnist.test.labels
+          }))
