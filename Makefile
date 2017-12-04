@@ -31,4 +31,4 @@ tox:
 	@tox
 
 #docs:
-	#@cd tensorflow_tutorial_01/docs && make html && open _build/html/index.html
+	#@cd tensorflow_tutorials/docs && make html && open _build/html/index.html

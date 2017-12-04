@@ -9,7 +9,7 @@
 # Copyright (c) 2017, garaemon <garaemon@gmail.com>
 
 from setuptools import setup, find_packages
-from tensorflow_tutorial_01 import __version__
+from tensorflow_tutorials import __version__
 
 tests_require = [
     'tensorflow',
@@ -50,7 +50,7 @@ tensorflow tutorial 01
     entry_points={
         'console_scripts': [
             # add cli scripts here in this form:
-            # 'tensorflow-tutorial-01=tensorflow_tutorial_01.cli:main',
+            # 'tensorflow-tutorial-01=tensorflow_tutorials.cli:main',
         ],
     },
 )
