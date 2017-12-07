@@ -12,7 +12,6 @@ from setuptools import setup, find_packages
 from tensorflow_tutorials import __version__
 
 tests_require = [
-    'tensorflow',
 ]
 
 setup(
@@ -43,6 +42,7 @@ tensorflow tutorial 01
     install_requires=[
         # add your dependencies here
         # remember to use 'package-name>=x.y.z,<x.y+1.0' notation (this way you get bugfixes)
+        'tensorflow', 'tensorboard',
     ],
     extras_require={
         'tests': tests_require,

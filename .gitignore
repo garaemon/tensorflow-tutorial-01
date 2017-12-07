@@ -61,3 +61,5 @@ docs/_build/
 
 # virtual env
 .venv
+# dataset
+MNIST_data/
