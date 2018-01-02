@@ -109,7 +109,7 @@ def train():
             test_writer.add_summary(summary, i)
             print('Accuracy at step %s: %s' % (i, acc))
         else:
-            summay, _ = sess.run([merged, train_step], feed_dict=feed_dict(True))
+            summary, _ = sess.run([merged, train_step], feed_dict=feed_dict(True))
             train_writer.add_summary(summary, i)
 
 def main(_):

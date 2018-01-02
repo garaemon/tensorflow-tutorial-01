@@ -116,7 +116,7 @@ def train():
                 run_options = tf.RunOptions(
                     trace_level=tf.RunOptions.FULL_TRACE)
                 run_metadata = tf.RunMetadata()
-                summay, _ = sess.run(
+                summary, _ = sess.run(
                     [merged, train_step],
                     feed_dict=feed_dict(True),
                     options=run_options,
@@ -125,7 +125,7 @@ def train():
                 train_writer.add_summary(summary, i)
                 print('Adding run metadata for', i)
             else:
-                summay, _ = sess.run(
+                summary, _ = sess.run(
                     [merged, train_step], feed_dict=feed_dict(True))
                 train_writer.add_summary(summary, i)
 
