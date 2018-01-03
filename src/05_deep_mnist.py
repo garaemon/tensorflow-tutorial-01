@@ -1,6 +1,28 @@
 #!/usr/bin/env python
 '''
 https://www.tensorflow.org/get_started/mnist/pros#build_a_multilayer_convolutional_network
+
+
+Model:
+  Input
+  |
+  v
+  conv (ReLU)
+  |
+  v
+  pool
+  |
+  v
+  conv (ReLU)
+  |
+  v
+  pool
+  |
+  v
+  fc w/ dropout (fully connected layer, ReLU)
+  |
+  v
+  fc
 '''
 
 from tensorflow.examples.tutorials.mnist import input_data
