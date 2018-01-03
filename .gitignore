@@ -63,5 +63,7 @@ docs/_build/
 .venv
 # dataset
 MNIST_data/
-
+# tf.contrib.learn.datasets.load_dataset('mnist') creates
+# MNIST-data directory
+MNIST-data/
 data/
